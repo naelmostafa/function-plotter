@@ -39,32 +39,33 @@ class PlotterUI(QWidget):
             if self.x_min_input.text() == '':
                 self.errorMessage('Enter x min')
                 return
-            if self.x_max_input.text() == '':
-                self.errorMessage('Enter x max')
-                return
-            if self.step_input.text() == '':
-                self.errorMessage('Enter step')
-                return
             if not self.isFloat(self.x_min_input.text()):
                 self.errorMessage('X min not valid'
                                   '\nEnter float number')
+                return
+            if self.x_max_input.text() == '':
+                self.errorMessage('Enter x max')
                 return
             if not self.isFloat(self.x_max_input.text()):
                 self.errorMessage('X max not valid'
                                   '\nEnter float number')
                 return
-            if not self.isFloat(self.step_input.text()) or float(self.step_input.text()) <= 0:
-                self.errorMessage('Step not valid'
-                                  '\nEnter float number > 0')
+            if self.step_input.text() == '':
+                self.errorMessage('Enter step')
                 return
             if float(self.x_min_input.text()) >= float(self.x_max_input.text()):
                 self.errorMessage('x min must be less than x max')
+                return
+            if not self.isFloat(self.step_input.text()) or float(self.step_input.text()) <= 0:
+                self.errorMessage('Step not valid'
+                                  '\nEnter float number > 0')
                 return
 
             Plotter.plot(self.function_input.text(), float(self.x_min_input.text()), float(self.x_max_input.text()),
                          float(self.step_input.text()))
         except Exception as e:
-            self.errorMessage(str(e))
+            self.errorMessage(f'Invalid function'
+                              f'\n{str(e)}')
 
     def initUI(self):
         self.setWindowTitle('Plotter')
