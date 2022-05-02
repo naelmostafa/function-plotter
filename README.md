@@ -24,8 +24,17 @@
 * PyQt5
 
 ## Sample run
+![ui](../assets/ui.png)
+![exit](../assets/exit.png)
 
 ![test1](../assets/test1.png)
+![test1-1](../assets/test1-1.png)
 
 ![test2](../assets/test2.png)
+![test2-1](../assets/test2-1.png)
+
+![error](../assets/error1.png)
+![error](../assets/error2.png)
+![error](../assets/error3.png)
+
 
