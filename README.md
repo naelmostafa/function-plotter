@@ -31,7 +31,7 @@
 ![test1-1](../assets/test1-1.png)
 
 ![test2](../assets/test2.png)
-![test2-1](../assets/test2-1.png)
+![test2-2](../assets/test2-1.png)
 
 ![error](../assets/error1.png)
 ![error](../assets/error2.png)
